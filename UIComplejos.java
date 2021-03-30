@@ -5,6 +5,7 @@ public class UIComplejos {
         public static double imaginaria;
         static Complejo[] complejo = new Complejo[2];
 
+
     public static void leerDatos(){
         Scanner scanner = new Scanner(System.in);
 
@@ -42,6 +43,11 @@ public class UIComplejos {
         System.out.println("la suma es: "+Complejo.mostrarSuma(complejo[0],complejo[1]));
         System.out.println("la resta es: "+Complejo.mostrarResta(complejo[0],complejo[1]));
         System.out.println("la multiplicacion es: "+Complejo.mostrarMultiplicacion(complejo[0],complejo[1]));
+        System.out.println("la division es: "+Complejo.mostrarDivision(complejo[0],complejo[1]));
+        System.out.println("la conjuncion es: "+Complejo.mostrarConjucion(complejo[0],complejo[1]));
+        System.out.println("la normatividad del copplejo 1 es: "+Complejo.normaComplejos(complejo[0]));
+        System.out.println("la normatividad del copplejo 2 es: "+Complejo.normaComplejos(complejo[1]));
+
 //        System.out.println("la suma es: "+Complejo.sumarReal(complejo[0],complejo[1]));
 //        System.out.println("la resta es: "+complejo.restarComplejos());
 //        System.out.println("la multiplicacion es: "+complejo.multComplejos());
