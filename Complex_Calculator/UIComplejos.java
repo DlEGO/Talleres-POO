@@ -1,3 +1,5 @@
+package Complex_Calculator;
+
 import java.util.Scanner;
 
 public class UIComplejos {
@@ -21,23 +23,6 @@ public class UIComplejos {
         System.out.println("\nEl complejo 2 es: "+Complejo.mostrarComplejo(complejo[1]));
     }
 
-    public static void mostrarMenu(){
-        Scanner scanner = new Scanner(System.in);
-        int opcion;
-        System.out.print("""
-            \t::MENU::
-            1. Sumar
-            2. restar
-            3. Multiplicar
-            4. Dividir
-            5. Norma
-            6. Conjugacion
-            0. salir
-            Opcion: """);
-        opcion = scanner.nextInt();
-
-    }
-
     public static void mostrarDatos(){
         System.out.println();
         System.out.println("la suma es: "+Complejo.mostrarSuma(complejo[0],complejo[1]));
@@ -45,15 +30,7 @@ public class UIComplejos {
         System.out.println("la multiplicacion es: "+Complejo.mostrarMultiplicacion(complejo[0],complejo[1]));
         System.out.println("la division es: "+Complejo.mostrarDivision(complejo[0],complejo[1]));
         System.out.println("la conjuncion es: "+Complejo.mostrarConjucion(complejo[0],complejo[1]));
-        System.out.println("la normatividad del copplejo 1 es: "+Complejo.normaComplejos(complejo[0]));
-        System.out.println("la normatividad del copplejo 2 es: "+Complejo.normaComplejos(complejo[1]));
-
-//        System.out.println("la suma es: "+Complejo.sumarReal(complejo[0],complejo[1]));
-//        System.out.println("la resta es: "+complejo.restarComplejos());
-//        System.out.println("la multiplicacion es: "+complejo.multComplejos());
-//        System.out.println("la division es: "+complejo.divComplejos());
-//        System.out.println("la norma es: "+complejo.normaComplejos());
-//        System.out.println("la conjucion es: "+complejo.conjucionComplejos());
-
+        System.out.println("la normatividad del complejo 1 es: "+Complejo.normaComplejos(complejo[0]));
+        System.out.println("la normatividad del complejo 2 es: "+Complejo.normaComplejos(complejo[1]));
     }
 }
