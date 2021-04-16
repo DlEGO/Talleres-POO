@@ -24,20 +24,20 @@ public class Point3D extends Point {
     }
 
     public double distanceOtherPoint3D(Point3D p2) {
-        return Math.sqrt(Math.pow((p2.getX()-super.getX()),2)+(Math.pow((p2.getY()-super.getY()),2))+(Math.pow((p2.z-this.z),2)));
+        return Math.sqrt(Math.pow((p2.getX()-this.getX()),2)+(Math.pow((p2.getY()-this.getY()),2))+(Math.pow((p2.z-this.z),2)));
     }
 
     public double distanceOrigin3D() {
-        return Math.sqrt(Math.pow(super.getX(),2)+(Math.pow(-super.getY(),2))+(Math.pow(this.z,2)));
+        return Math.sqrt(Math.pow(this.getX(),2)+(Math.pow(-this.getY(),2))+(Math.pow(this.z,2)));
     }
 
 
     public void showPoint3D() {
-        System.out.println();
+        System.out.println("La coordenada actual del punto es: "+this.toString());
     }
 
     @Override
     public String toString() {
-        return "["+super.getX()+","+super.getY()+","+z+"]";
+        return "["+this.getX()+","+this.getY()+","+z+"]";
     }
 }

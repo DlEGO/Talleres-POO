@@ -1,5 +1,6 @@
 package Point_Program;
 
+//TODO hacer una clase interfaz
 
 import Point_Program.Logic.Point;
 import Point_Program.Logic.Point3D;
@@ -42,6 +43,7 @@ public class Main {
 
         System.out.println("la distancia entre los dos puntos es: "+p1_3d.distanceOtherPoint3D(p2_3d));
         System.out.println("la distancia con el origen es: "+p1_3d.distanceOrigin3D());
+        p1_3d.showPoint3D();
 //        p1 = new Point(x,y);
 ////        p1.Up(4);
 //
