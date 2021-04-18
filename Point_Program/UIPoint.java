@@ -1,5 +1,6 @@
 package Point_Program;
 
+import Point_Program.Logic.Line;
 import Point_Program.Logic.Point;
 import Point_Program.Logic.Point3D;
 
@@ -17,6 +18,7 @@ public interface UIPoint {
                 \t::SELECCION DE MENU::
                 1. Punto en 2 dimensiones
                 2. Punto en 3 dimensiones
+                3. Linea en un plano
                 O. Salir
                 \tOpcion: """);
         op = sc.nextInt();
@@ -33,6 +35,15 @@ public interface UIPoint {
                 }
                 case 2 -> {
                     menuPoint3D();
+                    op = optionMenu();
+                    if(op == 1){
+                        menuSelect();
+                    }else if(op == 0){
+                        exit(0);
+                    }
+                }
+                case 3 -> {
+                    menuLine();
                     op = optionMenu();
                     if(op == 1){
                         menuSelect();
@@ -250,6 +261,92 @@ public interface UIPoint {
                 }
             }
         }while(op !=0);
+    }
+
+    static void menuLine(){
+        Scanner sc = new Scanner(System.in);
+        Point initPoint,endPoint;
+
+        double x1,y1;
+        double x2,y2;
+        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n");
+        System.out.println("\t::Linea::\n");
+        System.out.println("Digite las coordenadas del punto de inicio");
+        System.out.print("x: ");
+        x1 = sc.nextDouble();
+        System.out.print("y: ");
+        y1 = sc.nextDouble();
+        System.out.println("Digite las coordenadas del punto final");
+        System.out.print("x: ");
+        x2 = sc.nextDouble();
+        System.out.print("y: ");
+        y2 = sc.nextDouble();
+
+        initPoint = new Point(x1,y1);
+        endPoint = new Point(x2,y2);
+
+        Line line = new Line(initPoint,endPoint);
+
+        int op;
+        do{
+            System.out.print("""
+                    \n\n\n\t::MENU::
+                    1. Mover linea arriba
+                    2. Mover linea abajo
+                    3. Mover linea derecha
+                    4. Mover linea izquierda
+                    5. Calcular la longitud de la linea
+                    6. Mostrar las coordendas de la linea
+                    0. Return
+                    \tOpcion: """);
+            op = sc.nextInt();
+            double distance;
+            switch(op){
+                case 1 -> {
+                    System.out.print("Digite la distancia que quiere mover: ");
+                    distance = sc.nextDouble();
+                    line.upLine(distance);
+                    System.out.println("\n\n\n\n\n\n");
+                    System.out.println("la nueva coordenada actual es: "+line);
+                    op = option();
+                }
+                case 2 -> {
+                    System.out.print("Digite la distancia que quiere mover: ");
+                    distance = sc.nextDouble();
+                    line.downLine(distance);
+                    System.out.println("\n\n\n\n\n\n");
+                    System.out.println("la nueva coordenada actual es: "+line);
+                    op = option();
+                }
+                case 3 -> {
+                    System.out.print("Digite la distancia que quiere mover: ");
+                    distance = sc.nextDouble();
+                    line.rightLine(distance);
+                    System.out.println("\n\n\n\n\n\n");
+                    System.out.println("la nueva coordenada actual es: "+line);
+                    op = option();
+                }
+                case 4 -> {
+                    System.out.print("Digite la distancia que quiere mover: ");
+                    distance = sc.nextDouble();
+                    line.leftLine(distance);
+                    System.out.println("\n\n\n\n\n\n");
+                    System.out.println("la nueva coordenada actual es: "+line);
+                    op = option();
+                }
+                case 5 -> {
+                    System.out.println("\n\n\n\n\n\n");
+                    System.out.println("Punto inicial: "+line.getInitPoint()+"\tPunto final: "+line.getEndPoint());
+                    System.out.println("La distancia entre los puntos es: "+line.lineLength());
+                    op = option();
+                }
+                case 6 -> {
+                    System.out.println("\n\n\n\n\n\n");
+                    System.out.println("Las cordenadas del segemnto son: "+line);
+                    op = option();
+                }
+            }
+        }while(op!=0);
     }
 
     static int optionMenu(){
