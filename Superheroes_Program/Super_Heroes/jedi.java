@@ -1,15 +1,17 @@
-package Superheroes_Program.Telequineticos;
+package Superheroes_Program.Super_Heroes;
 
 import Superheroes_Program.Telequinesis;
 
-public class jedi extends Telequinesis.abs_Telequinesis {
+public class jedi implements Telequinesis {
+
+    private String nombre;
 
     public jedi() {
         nombre = "jedi";
     }
 
     public jedi(String nombre) {
-        super(nombre);
+        this.nombre = nombre;
     }
 
     @Override

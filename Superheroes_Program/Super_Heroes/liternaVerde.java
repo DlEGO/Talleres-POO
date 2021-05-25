@@ -1,15 +1,17 @@
-package Superheroes_Program.Voladores;
+package Superheroes_Program.Super_Heroes;
 
 import Superheroes_Program.Volador;
 
-public class liternaVerde extends Volador.abs_Volador{
+public class liternaVerde implements Volador {
+
+    private String nombre;
 
     public liternaVerde() {
         nombre = "green lantern";
     }
 
     public liternaVerde(String nombre) {
-        super(nombre);
+        this.nombre = nombre;
     }
 
     @Override

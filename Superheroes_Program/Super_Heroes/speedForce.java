@@ -1,10 +1,11 @@
-package Superheroes_Program.Velocistas;
+package Superheroes_Program.Super_Heroes;
 
 import Superheroes_Program.Velocidad;
 
-public class speedForce extends Velocidad.abs_Velocidad {
+public class speedForce implements Velocidad {
 
     private String color;
+    private String nombre;
 
     public speedForce(){
         nombre = "velocista";
@@ -12,7 +13,7 @@ public class speedForce extends Velocidad.abs_Velocidad {
     }
 
     public speedForce(String nombre, String color) {
-        super(nombre);
+        this.nombre = nombre;
         this.color = color;
     }
 

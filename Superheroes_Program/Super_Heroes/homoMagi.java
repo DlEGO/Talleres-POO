@@ -1,16 +1,19 @@
-package Superheroes_Program.Telequineticos;
+package Superheroes_Program.Super_Heroes;
 
 import Superheroes_Program.Telequinesis;
 
-public class homoMagi extends Telequinesis.abs_Telequinesis{
+public class homoMagi implements Telequinesis {
     private String energia;
+    private String nombre;
+
     public homoMagi() {
         nombre = "hechicero";
         energia = "magica";
     }
 
-    public homoMagi(String nombre) {
-        super(nombre);
+    public homoMagi(String nombre, String energia) {
+        this.nombre = nombre;
+        this.energia = energia;
     }
 
     @Override

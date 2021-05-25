@@ -1,18 +1,24 @@
-package Superheroes_Program.Fuertes;
+package Superheroes_Program.Super_Heroes;
 
 import Superheroes_Program.Fuerte;
 
-public class kroniano extends Fuerte.abs_Fuerte{
+public class kroniano implements Fuerte {
 
     private String arma;
+    private String nombre;
 
     public kroniano() {
         nombre = "kroniano";
         arma = "mazo";
     }
 
+    public kroniano(String nombre) {
+        this.nombre = nombre;
+        arma = "mazo";
+    }
+
     public kroniano(String nombre,String arma) {
-        super(nombre);
+        this.nombre = nombre;
         this.arma = arma;
     }
 
