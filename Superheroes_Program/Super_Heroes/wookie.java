@@ -1,9 +1,10 @@
-package Superheroes_Program.Fuertes;
+package Superheroes_Program.Super_Heroes;
 
 import Superheroes_Program.Fuerte;
 
-public class wookie extends Fuerte.abs_Fuerte{
+public class wookie implements Fuerte {
     private String arma;
+    private String nombre;
 
     public wookie() {
         nombre = "wookie";
@@ -11,7 +12,7 @@ public class wookie extends Fuerte.abs_Fuerte{
     }
 
     public wookie(String nombre,String arma) {
-        super(nombre);
+        this.nombre = nombre;
         this.arma = arma;
     }
 

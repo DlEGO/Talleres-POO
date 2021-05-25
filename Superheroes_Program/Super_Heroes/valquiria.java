@@ -1,15 +1,17 @@
-package Superheroes_Program.Fuertes;
+package Superheroes_Program.Super_Heroes;
 
 import Superheroes_Program.Fuerte;
 
-public class valquiria extends Fuerte.abs_Fuerte{
+public class valquiria implements Fuerte {
+
+    private String nombre;
 
     public valquiria() {
         nombre = "valquiria";
     }
 
     public valquiria(String nombre) {
-        super(nombre);
+        this.nombre = nombre;
     }
 
     @Override

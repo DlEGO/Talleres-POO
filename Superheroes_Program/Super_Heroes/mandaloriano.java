@@ -1,15 +1,17 @@
-package Superheroes_Program.Voladores;
+package Superheroes_Program.Super_Heroes;
 
 import Superheroes_Program.Volador;
 
-public class mandaloriano extends Volador.abs_Volador {
+public class mandaloriano implements Volador {
+
+    private String nombre;
 
     public mandaloriano() {
         nombre = "mandaloriano";
     }
 
     public mandaloriano(String nombre) {
-        super(nombre);
+        this.nombre = nombre;
     }
 
     @Override

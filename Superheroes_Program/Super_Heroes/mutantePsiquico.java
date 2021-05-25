@@ -1,15 +1,17 @@
-package Superheroes_Program.Telequineticos;
+package Superheroes_Program.Super_Heroes;
 
 import Superheroes_Program.Telequinesis;
 
-public class mutantePsiquico extends Telequinesis.abs_Telequinesis{
+public class mutantePsiquico implements Telequinesis {
+
+    private String nombre;
 
     public mutantePsiquico() {
         nombre = "mutante";
     }
 
     public mutantePsiquico(String nombre) {
-        super(nombre);
+        this.nombre = nombre;
     }
 
     @Override
