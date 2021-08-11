@@ -1,6 +1,6 @@
 package Superheroes_Program;
 
-public interface Telequinesis extends SuperHeroes {
+public interface Telequinesis {
     String hacerFlotar();
     String lanzar();
     String empujar();

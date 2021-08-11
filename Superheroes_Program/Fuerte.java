@@ -1,6 +1,6 @@
 package Superheroes_Program;
 
-public interface Fuerte extends SuperHeroes{
+public interface Fuerte{
 
     String levantar();
     String defenderse();

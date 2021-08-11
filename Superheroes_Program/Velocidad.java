@@ -1,6 +1,6 @@
 package Superheroes_Program;
 
-public interface Velocidad extends SuperHeroes{
+public interface Velocidad{
     String correr();
     String vortice();
     String camaraLenta();
