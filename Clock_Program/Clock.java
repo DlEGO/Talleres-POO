@@ -13,13 +13,6 @@ public class Clock {
     }
 
     public void increaseSecond(int n){
-//        int aux = 0;
-//        aux=s.increase(n);
-//        System.out.println(aux);
-//        aux = m.increase(aux);
-//        System.out.println(aux);
-//        aux = h.increase(aux);
-//        System.out.println(aux);
         h.increase(m.increase(s.increase(n)));
     }
 
