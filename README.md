@@ -1,2 +1,10 @@
 # Talleres-POO
-Talleres de tercer semestre de programación orientada a objetos
+Talleres de programación orientada a objetos
+>## Ejercicios para entregar...
+> - Clock_Program
+> - Complex_Calculator
+> - Point_Program
+> - Superheroes_Program
+
+
+
