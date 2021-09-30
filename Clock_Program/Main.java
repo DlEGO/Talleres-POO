@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        Clock reloj = new Clock(24, 60, 60);
+        Clock reloj = new Clock(0, 0, 0);
 
         System.out.println(reloj);
 

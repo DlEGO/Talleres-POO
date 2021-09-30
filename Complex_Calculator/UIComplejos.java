@@ -1,36 +1,66 @@
 package Complex_Calculator;
+import javax.swing.*;
+import java.awt.*;
 
-import java.util.Scanner;
+public class UIComplejos extends JFrame {
 
-public class UIComplejos {
-        public static double real;
-        public static double imaginaria;
-        static Complejo[] complejo = new Complejo[2];
+    private JPanel panel;
 
 
-    public static void leerDatos(){
-        Scanner scanner = new Scanner(System.in);
 
-        for(int i=0;i<2;i++){
-            System.out.print("Digite parte real del complejo "+(1+i)+":");
-            real = scanner.nextDouble();
-            System.out.print("Digite parte imaginaria del complejo "+(1+i)+":");
-            imaginaria = scanner.nextDouble();
-
-            complejo[i] = new Complejo(real,imaginaria);
-        }
-        System.out.print("\nEl complejo 1 es: "+Complejo.mostrarComplejo(complejo[0]));
-        System.out.println("\nEl complejo 2 es: "+Complejo.mostrarComplejo(complejo[1]));
+    public UIComplejos(){
+      setSize(800,500);
+      setTitle("Complejos");
+      initComponents();
+      setLocationRelativeTo(null);
+      setDefaultCloseOperation(EXIT_ON_CLOSE);
+      setVisible(true);
     }
 
-    public static void mostrarDatos(){
-        System.out.println();
-        System.out.println("la suma es: "+Complejo.mostrarSuma(complejo[0],complejo[1]));
-        System.out.println("la resta es: "+Complejo.mostrarResta(complejo[0],complejo[1]));
-        System.out.println("la multiplicacion es: "+Complejo.mostrarMultiplicacion(complejo[0],complejo[1]));
-        System.out.println("la division es: "+Complejo.mostrarDivision(complejo[0],complejo[1]));
-        System.out.println("la conjuncion es: "+Complejo.mostrarConjucion(complejo[0],complejo[1]));
-        System.out.println("la normatividad del complejo 1 es: "+Complejo.normaComplejos(complejo[0]));
-        System.out.println("la normatividad del complejo 2 es: "+Complejo.normaComplejos(complejo[1]));
+    public void initComponents(){
+        initPanels();
+        initLabels();
+    }
+
+    public void initPanels(){
+        panel = new JPanel();
+        panel.setLayout(null);
+        this.getContentPane().add(panel);
+    }
+
+    private void initLabels() {
+        JLabel etiqueta1 = new JLabel("Complejo 1");
+        etiqueta1.setBounds(140,35,200,30);
+        etiqueta1.setFont(new Font("Arial Rounded MT Bold",0,18));
+        panel.add(etiqueta1);
+        JLabel etiqueta2 = new JLabel("Complejo 2");
+        etiqueta2.setBounds(470,35,200,30);
+        etiqueta2.setFont(new Font("Arial Rounded MT Bold",0,18));
+        panel.add(etiqueta2);
+
+        JLabel etiqueta4 = new JLabel("real: ");
+        etiqueta4.setBounds(55,90,200,30);
+        etiqueta4.setFont(new Font("consolas",0,18));
+        panel.add(etiqueta4);
+
+        JLabel etiqueta3 = new JLabel("real: ");
+        etiqueta3.setBounds(400,90,200,30);
+        etiqueta3.setFont(new Font("consolas", 0,18));
+        panel.add(etiqueta3);
+
+        JLabel etiqueta5 = new JLabel("imaginario: ");
+        etiqueta5.setBounds(180,90,200,30);
+        etiqueta5.setFont(new Font("consolas",0,18));
+        panel.add(etiqueta5);
+
+        JLabel etiqueta6 = new JLabel("imaginario: ");
+        etiqueta6.setBounds(510,90,200,30);
+        etiqueta6.setFont(new Font("consolas", 0,18));
+        panel.add(etiqueta6);
+
+    }
+
+    public void initJTextField(){
+
     }
 }
